@@ -112,6 +112,7 @@ tcpconnect('172.16.111.141', 80)
 
 ![](img/kali-ufw-closed.png)
   * 攻击者主机执行代码(将.py文件拖到虚拟机：设备——共享粘贴板——双向；拖放——双向)
+  
   ![](img/kali-attacker-py.png)
   * 靶机抓包(先抓包，再运行py文件，保证抓到整个过程的包)
   ```
@@ -119,9 +120,11 @@ tcpconnect('172.16.111.141', 80)
   sudo tcpdump -i eth0 -enp -w catch_from_eth0.pcap
   ```
   * 打开文件 catch_from_eth0.pcap
+  
   ![](img/catch_from_eth0.png)
   * nmap复刻：
   ```nmap -sT -p 80 172.16.111.141```
+  
   ![](img/nmap复刻.png)
 
 * Open
@@ -131,10 +134,13 @@ tcpconnect('172.16.111.141', 80)
 
   ![](img/tcp-connect%20-scan-open-py.png)
   * 靶机抓包
+  
   ![](img/catch_from_eth0_open.png)
   * 打开文件
+  
   ![](img/catch_from_eth0_openpcap.png)
   * nmap复刻
+  
   ![](img/nmap复刻（open）.png)
 
 * Filtered
