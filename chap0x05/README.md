@@ -232,7 +232,7 @@ Xmasscan('172.16.111.141', 80)
 ![](img/tcp_xmas_scan_closed.png)
   * 靶机抓包：  
   ![](img/xmas_scan_closed_kali.png)
-  * 攻击者主机执行代码：
+  * 攻击者主机执行代码：  
   ![](img/xmas_scan_closed_kaliattacker.png)
   * 打开文件：  
   ![](img/xmas_scan_closed_pcap.png)
