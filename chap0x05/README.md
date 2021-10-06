@@ -291,7 +291,7 @@ finscan('172.16.111.141', 80)
   * 打开文件：  
   ![](img/fin_scan_closed_pcap.png)
   * nmap复刻：  
-  ```sudo nmap -sF -p 80 172.16.111.141```
+  ```sudo nmap -sF -p 80 172.16.111.141```  
   ![](img/fin_scan_closed_nmap.png)
 
 * Open
@@ -389,7 +389,7 @@ udpscan('172.16.111.141', 53)
   * 打开文件：  
   ![](img/udp_scan_closed_pcap.png)
   * nmap复刻：
-  ```sudo nmap -sU -p 80 172.16.111.141```  
+  ```sudo nmap -sU -p 80 172.16.111.141```    
   ![](img/udp_scan_closed_nmap.png)
 
 
