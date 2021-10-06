@@ -294,7 +294,7 @@ finscan('172.16.111.141', 80)
   ```sudo nmap -sF -p 80 172.16.111.141```  
   ![](img/fin_scan_closed_nmap.png)
 
-* Open
+* Open  
 ![](img/fin_scan_open.png)
   * 靶机抓包：  
   * 攻击者主机执行代码：  
