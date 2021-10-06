@@ -237,7 +237,7 @@ Xmasscan('172.16.111.141', 80)
   * 打开文件：  
   ![](img/xmas_scan_closed_pcap.png)
   * nmap复刻：  
-  ```sudo nmap -sX -p 80 172.16.111.141```
+  ```sudo nmap -sX -p 80 172.16.111.141```  
   ![](img/xmas_scan_closed_nmap.png)
 
 * Open(与上述步骤重复，只展示pcap文件和nmap截图)  
