@@ -109,10 +109,8 @@ tcpconnect('172.16.111.141', 80)
 ```  
 
 * Closed(在靶机执行```sudo ufw disable```使其处于关闭状态)
-
 ![](img/kali-ufw-closed.png)
   * 攻击者主机执行代码(将.py文件拖到虚拟机：设备——共享粘贴板——双向；拖放——双向)
-  
   ![](img/kali-attacker-py.png)
   * 靶机抓包(先抓包，再运行py文件，保证抓到整个过程的包)
   ```
@@ -120,43 +118,31 @@ tcpconnect('172.16.111.141', 80)
   sudo tcpdump -i eth0 -enp -w catch_from_eth0.pcap
   ```
   * 打开文件 catch_from_eth0.pcap
-  
   ![](img/catch_from_eth0.png)
   * nmap复刻：
   ```nmap -sT -p 80 172.16.111.141```
-  
   ![](img/nmap复刻.png)
 
 * Open
-
 ![](img/open-apache2.png)
   * 攻击者主机执行代码
-
   ![](img/tcp-connect%20-scan-open-py.png)
   * 靶机抓包
-  
   ![](img/catch_from_eth0_open.png)
   * 打开文件
-  
   ![](img/catch_from_eth0_openpcap.png)
   * nmap复刻
-  
   ![](img/nmap复刻（open）.png)
 
 * Filtered
-
 ![](img/ufw-deny.png)
   * 靶机抓包：
-  
   ![](img/catch_from_eth0_filter.png)
   * 攻击者主机执行代码：
-  
   ![](img/kali-attacker-filter.png)
   * 打开文件：
-  
   ![](img/catch_from_eth0_filterpcap.png)
   * nmap复刻
-  
   ![](img/nmap_filter.png)
 
 ***TCP stealth scan***
@@ -189,44 +175,33 @@ def tcpstealthscan(dst_ip, dst_port, timeout=10):
 tcpstealthscan('172.16.111.141', 80)
 ```
 * Closed
-
 ![](img/stealth_scan_closed.png)
   * 靶机抓包：
-  
   ![](img/stealth_scan_closed_kali.png)
   * 攻击者主机执行代码：
-  
   ![](img/stealth_scan_closed_kaliattacker.png)
   * 打开文件：
-  
   ![](img/stealth_scan_closed_pcap.png)
   * nmap复刻
   ```sudo nmap -sS -p 80 172.16.111.141```
-  
   ![](img/stealth_scan_closed_nmap.png)
 
 * Open(重复上述步骤)
-
 ![](img/stealth_scan_open.png)
   * 靶机抓包
   * 攻击者主机执行代码
   * 打开文件：
-  
   ![](img/stealth_scan_open_pcap.png)
   * nmap复刻：
-  
   ![](img/stealth_scan_open_namp.png)
 
 * Filtered
-
 ![](img/stealth_scan_filtered.png)
   * 靶机抓包
   * 攻击者主机执行代码
   * 打开文件：
-  
   ![](img/stealth_scan_filtered_pacp.png)
   * nmap复刻：
-  
   ![](img/stealth_scan_filtered_nmap.png)
 
 ***TCP Xmas scan***
@@ -254,44 +229,33 @@ Xmasscan('172.16.111.141', 80)
 ```
 
 * Closed
-
 ![](img/tcp_xmas_scan_closed.png)
   * 靶机抓包：
-  
   ![](img/xmas_scan_closed_kali.png)
   * 攻击者主机执行代码：
-  
   ![](img/xmas_scan_closed_kaliattacker.png)
   * 打开文件：
-  
   ![](img/xmas_scan_closed_pcap.png)
   * nmap复刻：
   ```sudo nmap -sX -p 80 172.16.111.141```
-  
   ![](img/xmas_scan_closed_nmap.png)
 
 * Open(与上述步骤重复，只展示pcap文件和nmap截图)
-
 ![](img/xmas_scan_open.png)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/xmas_scan_open_pcap.png)
   * nmap复刻：
-  
   ![](img/xmas_scan_open_nmap.png)
 
 * Filtered
-
 ![](img/xmas_scan_filtered.png)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/xmas_scan_filtered_pcap.png)
   * nmap复刻：
-  
   ![](img/xmas_scan_filtered_nmap.png)
 
 
@@ -319,44 +283,33 @@ def finscan(dst_ip, dst_port, timeout=10):
 finscan('172.16.111.141', 80)
 ```
 * Closed
-
 ![](img/fin_scan_closed.png)
   * 靶机抓包：
-  
   ![](img/fin_scan_closed_kali.png)
   * 攻击者主机执行代码：
-  
   ![](img/fin_scan_closed_kaliattacker.png)
   * 打开文件：
   ![](img/fin_scan_closed_pcap.png)
   * nmap复刻：
   ```sudo nmap -sF -p 80 172.16.111.141```
-  
   ![](img/fin_scan_closed_nmap.png)
 
 * Open
-
 ![](img/fin_scan_open.png)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/fin_scan_open_pcap.png)
   * nmap复刻：
-  
   ![](img/fin_scan_open_nmap.png)
 
 * Filtered
-
-
 ![](img/fin_scan_filtered.png)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/fin_scan_filtered_pcap.png)
   * nmap复刻：
-  
   ![](img/fin_scan_filtered_nmap.png)
 
 ***TCP null scan***
@@ -386,29 +339,23 @@ nullscan('172.16.111.141', 80)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/null_scan_closed_pcap.png)
   * nmap复刻：
-  
   ![](img/null_scan_closed_nmap.png)
 * Open
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/null_scan_open_pcap.png)
   * nmap复刻：
-  
   ![](img/null_scan_open_nmap.png)
 * Filtered
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/null_scan_filtered_pcap.png)
   * nmap复刻：
   ```sudo nmap -sN -p 80 172.16.111.141```
-  
   ![](img/null_scan_filtered_nmap.png)
 
 ***UDP scan***
@@ -436,16 +383,13 @@ def udpscan(dst_ip, dst_port, dst_timeout=10):
 udpscan('172.16.111.141', 53)
 ```
 * Closed
-
 ![](img/udp_scan_closed.png)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/udp_scan_closed_pcap.png)
   * nmap复刻：
   ```sudo nmap -sU -p 80 172.16.111.141```
-  
   ![](img/udp_scan_closed_nmap.png)
 
 
@@ -453,23 +397,18 @@ udpscan('172.16.111.141', 53)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/udp_scan_open_pcap.png)
   * nmap复刻：
-  
   ![](img/udp_scan_open_nmap.png)
 
 
 * Filtered
-
 ![](img/udp_scan_filtered.png)
   * 靶机抓包：
   * 攻击者主机执行代码：
   * 打开文件：
-  
   ![](img/udp_scan_filtered_pcap.png)
   * nmap复刻：
-  
   ![](img/udp_scan_filtered_nmap.png)
 
 ## 参考资料
