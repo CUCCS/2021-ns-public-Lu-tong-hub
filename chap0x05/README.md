@@ -71,7 +71,7 @@ ufw enable && ufw deny 53/udp #开启53端口监听
 ```
 sudo apt-get update
 # 安装dnsmasq
-sudo apt-get instal dnsmasq
+sudo apt-get install dnsmasq
 # 启动
 systemctl start dnsmasq
 # 查看状态
@@ -389,7 +389,7 @@ udpscan('172.16.111.141', 53)
   * 打开文件：  
   ![](img/udp_scan_closed_pcap.png)
   * nmap复刻：
-  ```sudo nmap -sU -p 80 172.16.111.141```    
+  ```sudo nmap -sU -p 53 172.16.111.141```    
   ![](img/udp_scan_closed_nmap.png)
 
 
